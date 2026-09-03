@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000000'/%3E%3Cpath d='M6 6 L58 6 L58 58 L6 58 Z' fill='none' stroke='%23f2f0e9' stroke-width='3'/%3E%3Ctext x='32' y='46' font-family='Anton, sans-serif' font-size='38' fill='%23f2f0e9' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <style>
   :root{
     --black: #0a0a0a;
@@ -163,8 +164,7 @@
   .hero-byline{
     font-size:1rem;
     font-weight:600;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
+    letter-spacing:0.04em;
     color:var(--grey);
     margin-top:14px;
   }
@@ -402,6 +402,24 @@
   .ccard .k{ font-size:0.72rem; font-weight:700; letter-spacing:0.08em; opacity:0.6; margin-bottom:6px; }
   .ccard .v{ font-family:'Anton', sans-serif; font-size:1.15rem; }
 
+  .icon-row{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin-top:20px;
+  }
+  .icard{
+    width:52px; height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid var(--line);
+    color:var(--ink);
+    transition:background .2s ease, color .2s ease;
+  }
+  .icard svg{ width:22px; height:22px; }
+  .icard:hover{ background:var(--paper); color:var(--true-black); }
+
   footer{
     padding:32px;
     display:flex;
@@ -563,7 +581,6 @@
         <div class="vcap">Client Project 06<small>Live stream highlight</small></div>
       </div>
     </div>
-    <p class="portfolio-note">Placeholder embeds above — swap each iframe's video ID for your client's real YouTube video to fill this section. Card sizes vary on purpose, like a manga page layout.</p>
   </div>
 </section>
 
@@ -579,6 +596,18 @@
       <a class="ccard" href="https://twitter.com/Alks007vD" target="_blank" rel="noopener">
         <div class="k">Twitter / X</div>
         <div class="v">@Alks007vD</div>
+      </a>
+      <a class="ccard" href="https://ytjobs.co/talent/profile/625652" target="_blank" rel="noopener">
+        <div class="k">YT Jobs</div>
+        <div class="v">View profile</div>
+      </a>
+    </div>
+    <div class="icon-row">
+      <a class="icard" href="https://www.youtube.com/@Alks007" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2 .6 9.4.6 9.4.6s7.4 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5L15.8 12l-6.2 3.5Z"/></svg>
+      </a>
+      <a class="icard" href="https://www.instagram.com/aleks_amb/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.6"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
       </a>
     </div>
   </div>
