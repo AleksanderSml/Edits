@@ -324,21 +324,19 @@
 
   /* ---------- PORTFOLIO ---------- */
   .video-masonry{
-    display:grid;
-    grid-template-columns:repeat(6, 1fr);
-    gap:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:28px;
   }
   .video-card{
     position:relative;
     border:3px solid var(--line);
     background:var(--panel);
     overflow:hidden;
-    grid-column:span 3;
+    flex:0 0 calc((100% - 28px) / 2);
     aspect-ratio:16/9;
   }
-  .video-card.tall{ grid-column:span 2; aspect-ratio:9/13; }
-  .video-card.wide{ grid-column:span 4; aspect-ratio:16/8; }
-  .video-card.small{ grid-column:span 2; aspect-ratio:16/9; }
   .video-card iframe{
     width:100%; height:100%; border:0; display:block;
   }
@@ -442,8 +440,9 @@
     .skill-block{ border-right:none; border-bottom:3px solid var(--line); }
     .skill-block:last-child{ border-bottom:none; }
     .lang-line{ flex-direction:column; gap:6px; }
-    .video-masonry{ grid-template-columns:repeat(2, 1fr); }
-    .video-card, .video-card.tall, .video-card.wide, .video-card.small{ grid-column:span 2; aspect-ratio:16/9; }
+  }
+  @media (max-width:760px){
+    .video-card{ flex:0 0 100%; }
   }
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
@@ -556,20 +555,17 @@
       <h2 class="sec-title display">Selected Work</h2>
     </div>
     <div class="video-masonry">
-      <div class="video-card wide">
+      <div class="video-card">
         <iframe src="https://www.youtube.com/embed/b8Hyem-UZ5Q" title="Client edit 1" allowfullscreen></iframe>
         <div class="vcap">CaseOh<small>Gaming · Edit</small></div>
       </div>
-      <div class="video-card small">
+      <div class="video-card">
         <iframe src="https://www.youtube.com/embed/l33So_tKOV4" title="Client edit 2" allowfullscreen></iframe>
         <div class="vcap">Joe Rogan<small>Podcasts cuts · Edit</small></div>
       </div>
-      <div class="video-card tall">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Client edit 3" allowfullscreen></iframe>
-        <div class="vcap">Client Project 03<small>Shorts · Reaction</small></div>
-      </div>
+
       <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/jq_lkDqtaVc&" title="Client edit 4" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/jq_lkDqtaVc" title="Client edit 4" allowfullscreen></iframe>
         <div class="vcap">My video<small>Tutorial · Casual talking</small></div>
       </div>
       <div class="video-card">
